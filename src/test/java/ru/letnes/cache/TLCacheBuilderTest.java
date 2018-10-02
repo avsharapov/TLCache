@@ -3,7 +3,7 @@ package ru.letnes.cache;
 import org.mockito.Mock;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.letnes.cache.filesUtil.IFiles;
+import ru.letnes.cache.filesutil.IFiles;
 import ru.letnes.cache.strategy.CacheStrategy;
 
 import java.io.IOException;
@@ -85,6 +85,7 @@ public class TLCacheBuilderTest {
 
     @Test
     public void testGetRamCache() {
+        cacheBuilder.setRamCache(mockRamCache);
         cacheBuilder.setRamCacheStrategy(mockRamCacheStrategy);
         CacheStrategy<String, String> ramCache = cacheBuilder.getRamCache();
         assertEquals(ramCache, mockRamCacheStrategy);
@@ -96,6 +97,22 @@ public class TLCacheBuilderTest {
         cacheBuilder.setFileCacheStrategy(mockFileCacheStrategy);
         CacheStrategy<String, String> fileCache = cacheBuilder.getFileCache();
         assertEquals(fileCache, mockFileCacheStrategy);
+    }
+
+    @Test
+    public void testGetFileImpl() throws IOException {
+        cacheBuilder.setFileImpl(mockFileImpl);
+
+        IFiles fileImpl = cacheBuilder.getFileImpl();
+
+        assertEquals(fileImpl, mockFileImpl);
+    }
+
+    @Test
+    public void testGetFileImplWithNotSet() throws IOException {
+        IFiles fileImpl = cacheBuilder.getFileImpl();
+
+        assertNotNull(fileImpl);
     }
 
     @Test

@@ -23,8 +23,6 @@ class TLCache<K, V extends Serializable> implements ICache<K, V> {
         this.fileCapacity = builder.getFileCapacity();
         this.ramCache = builder.getRamCache();
         this.fileCache = builder.getFileCache();
-        assert this.ramCache != null;
-        assert this.fileCache != null;
     }
 
     @Override

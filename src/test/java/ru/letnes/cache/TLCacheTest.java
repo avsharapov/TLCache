@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import ru.letnes.cache.strategy.CacheStrategy;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 import static org.mockito.Mockito.*;
 import static org.mockito.MockitoAnnotations.initMocks;
@@ -53,6 +54,19 @@ public class TLCacheTest {
         verify(ramCache, times(1)).get(KEY);
         assertEquals(value, VALUE);
     }
+
+    @Test
+    public void testGetWithValueIsNullInFileAndRamCache() throws IOException, ClassNotFoundException {
+        when(ramCache.get(KEY)).thenReturn(null);
+        when(fileCache.containsKey(KEY)).thenReturn(false );
+
+        String value = cache.get(KEY);
+
+        verify(ramCache, times(1)).get(KEY);
+        verify(fileCache, times(1)).containsKey(KEY);
+        assertNull(value);
+    }
+
 
     @Test
     public void testGetIfValueInFileCache() throws IOException, ClassNotFoundException {

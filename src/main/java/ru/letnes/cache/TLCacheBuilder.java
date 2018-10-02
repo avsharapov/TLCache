@@ -1,8 +1,8 @@
 package ru.letnes.cache;
 
 
-import ru.letnes.cache.filesUtil.FilesImpl;
-import ru.letnes.cache.filesUtil.IFiles;
+import ru.letnes.cache.filesutil.FilesImpl;
+import ru.letnes.cache.filesutil.IFiles;
 import ru.letnes.cache.strategy.CacheStrategy;
 import ru.letnes.cache.strategy.LRUStrategy;
 

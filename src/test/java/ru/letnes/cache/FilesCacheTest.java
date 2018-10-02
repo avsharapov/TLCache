@@ -3,7 +3,7 @@ package ru.letnes.cache;
 import org.mockito.Mock;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.letnes.cache.filesUtil.IFiles;
+import ru.letnes.cache.filesutil.IFiles;
 
 import java.io.*;
 import java.nio.file.Path;

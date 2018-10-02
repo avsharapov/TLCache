@@ -1,4 +1,4 @@
-package ru.letnes.cache.filesUtil;
+package ru.letnes.cache.filesutil;
 
 import java.io.*;
 import java.nio.file.FileSystems;

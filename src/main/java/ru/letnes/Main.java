@@ -2,7 +2,7 @@ package ru.letnes;
 
 import ru.letnes.cache.ICache;
 import ru.letnes.cache.TLCacheBuilder;
-import ru.letnes.cache.filesUtil.FilesImpl;
+import ru.letnes.cache.filesutil.FilesImpl;
 import ru.letnes.cache.strategy.LRUStrategy;
 
 import java.io.IOException;

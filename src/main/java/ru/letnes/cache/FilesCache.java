@@ -1,6 +1,6 @@
 package ru.letnes.cache;
 
-import ru.letnes.cache.filesUtil.IFiles;
+import ru.letnes.cache.filesutil.IFiles;
 
 import java.io.*;
 import java.nio.file.Path;
