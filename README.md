@@ -1,1 +1,1 @@
-# TLCache [![Build Status](https://travis-ci.com/avsharapov/TLCache.svg?branch=master)](https://travis-ci.com/avsharapov/TLCache)
+# TLCache [![Build Status](https://travis-ci.com/avsharapov/TLCache.svg?branch=master)](https://travis-ci.com/avsharapov/TLCache) [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=ru.letnes%3ATLCache&metric=alert_status)](https://sonarcloud.io/dashboard?id=ru.letnes%3ATLCache)

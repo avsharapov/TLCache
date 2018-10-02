@@ -4,8 +4,6 @@ jdk:
 addons:
   sonarcloud:
     organization: "avsharapov-github"
-    token:
-      secure: "fRwd+ss3eAcDfLRqCS/yCCL3Knvzg9M0UKVEZmgFzqEQO0+MCzrcKVMc8ns7pZ/bLa5mgQUeu4K5PxKLvZ8A4GZ77tuYgbcjAqzRNJBwptBb5iW2DoCKCgRbh7bQwfbt0NkR6pZ7h9JuYLbSNldUaQZzbAfbTXt8TWQADTc5JaUok2rbXFR0KNV/k1OQrjjwwXdyz9Hv/+txyuoOoOblfZspvS0IbHly0qbqH7Rg03ZW/4zbSGabPkwXYVLp6Ykr7zL4a51A8UvrRek/Ucg3Qc9zD0qg7sWEsCDevXWr3j9k4HXlqYV2oeFg5B2z2r5ZBu3XjiCfzb/11m2KbYe7whaqBa2aDC4rH4xs0fDN7+mxtfCDS+0Cy64KigNt4LyoIIoINyapqToqHCZS4SKlW/iL+c0ett3VXSEUgJW2q8qS2OgWvE4zaPzkchUqgpL6Tg/HOKhmoMcylj2pB455VxZnjCF+8IKftSyCQCDPUAGHiGSJOLUpTh0/JIFdbhK0hDC15BLfTTxqRy9/OffHKvCXNanbi8yNXinzS59wA0VfEOeXtc6OrjY/0bdQ/LGnBDhJPIAt1jLSlzZZLIZcPAOz86zqkvZUNYYMGjVztd9wS350m7GxMtZ/1WA8AAMPsYiRaObPi2rhzWWmSt/QDQuukFfDcpqGbil8z/Qd6X8="
 script:
   # other script steps might be done before running the actual analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=${SONAR_TOKEN}
