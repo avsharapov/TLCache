@@ -1,1 +1,1 @@
-# TLCache
+# TLCache [![Build Status](https://travis-ci.com/avsharapov/TLCache.svg?branch=master)](https://travis-ci.com/avsharapov/TLCache)
